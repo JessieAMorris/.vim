@@ -47,7 +47,7 @@ if has('gui_running')
   "Add spellchecking
   set spell
   set mousemodel=popup
-  
+
   set guifont=Droid\ Sans\ Mono\ 9
   colors slate_mine
 endif
@@ -89,25 +89,22 @@ set nobackup
 " Clear highlights (from search) after hitting Escape a bunch
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
+if has("autocmd")
+  " Whitespace Highlighting
+  highlight ExtraWhitespace ctermbg=red guibg=red
+  match ExtraWhitespace /\s\+$/
+  autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+  autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+  autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+  autocmd BufWinLeave * call clearmatches()
 
-" Highlights mixed spaces and tabs
-highlight MixedIndent ctermbg = red guibg = #FF0000
+  " Uncomment the following to have Vim jump to the last position when
+  " reopening a file
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
-" Executes all auto commands
-function! <SID>SetupAutoCommands()
-  " Auto commands group
-  augroup better_whitespace
-    autocmd!
-    " Highlight extraneous whitespace at the end of lines, but not the
-    " current line
-    syn clear MixedIndent | syn match MixedIndent excludenl /\v^\s*( \t|\t )\s*/
-    autocmd InsertEnter * syn clear MixedIndent | syn match MixedIndent excludenl /\v^\s*( \t|\t )\s*\%#\@!/ containedin=ALL
-    autocmd InsertLeave,BufReadPost * syn clear MixedIndent | syn match MixedIndent excludenl /\v^\s*( \t|\t )\s*/ containedin=ALL
-  augroup END
-endfunction
-
-" Initial call to setup autocommands
-call <SID>SetupAutoCommands()
+" Switch off :match highlighting.
+match
 
 " For Gundo.vim
 let g:gundo_prefer_python3 = 1
@@ -116,6 +113,9 @@ nnoremap <F5> :GundoToggle<CR>
 " Adds tabs to CommandT
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
+
+" Us PWD instead of .git root
+let g:CommandTTraverseSCM='pwd'
 
 " Allow escapes in CommandT on terminal
 if &term =~ "xterm" || &term =~ "screen"
@@ -131,11 +131,11 @@ augroup CommandTExtension
 augroup END
 
 " Ignores directories for CommandT
-set wildignore+=node_modules,.git,build,venv
+set wildignore+=node_modules,.git,build,venv,env,coverage
 
 " Makes the little "|" show up for tabs
-set list
-set listchars=tab:\|\ ,trail:·
+" set list
+" set listchars=tab:\|\ ,trail:·
 
 " ex command for toggling hex mode - define mapping if desired
 command -bar Hexmode call ToggleHex()

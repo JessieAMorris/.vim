@@ -10,3 +10,9 @@
 [submodule "pack/airblade/start"]
 	path = pack/gitgutter/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/editorconfig/start/editorconfig"]
+	path = pack/editorconfig/start/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "pack/vim-go/start/vim-go"]
+	path = pack/vim-go/start/vim-go
+	url = https://github.com/fatih/vim-go.git
