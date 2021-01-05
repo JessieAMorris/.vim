@@ -16,3 +16,6 @@
 [submodule "pack/vim-go/start/vim-go"]
 	path = pack/vim-go/start/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "pack/mustache/start/vim-mustache-handlebars"]
+	path = pack/mustache/start/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git

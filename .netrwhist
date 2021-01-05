@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/jessie/projects/helmcharts/charts/standard-service/charts'
+let g:netrw_dirhist_2='/Users/jessie/projects/dispute-flow-api-service/.git'
 let g:netrw_dirhist_1='/Users/jessie/projects/bin_search_service/setup.sh'
 let g:netrw_dirhist_0='/Users/jessie/projects/sql_database/.gitlab'
 let g:netrw_dirhist_9='/Users/jessie/projects/midigator_sql/security/schemas'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_7='/Users/jessie/projects/infrastructure/docs/runbooks'
 let g:netrw_dirhist_6='/Users/jessie/projects/infrastructure/docs'
 let g:netrw_dirhist_5='/Users/jessie/projects/infrastructure'
 let g:netrw_dirhist_4='/tmp'
-let g:netrw_dirhist_3='/Users/jessie/projects/midigator_ui/config/stack'
-let g:netrw_dirhist_2='/Users/jessie/projects/midigator_ui/config'
