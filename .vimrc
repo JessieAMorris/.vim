@@ -101,10 +101,6 @@ if has("autocmd")
   " Uncomment the following to have Vim jump to the last position when
   " reopening a file
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-
-  " .tpl files used in helm are yamlish
-  autocmd BufNewFile,BufRead *.tpl set filetype=yaml
 endif
 
 " Switch off :match highlighting.
@@ -135,7 +131,7 @@ augroup CommandTExtension
 augroup END
 
 " Ignores directories for CommandT
-set wildignore+=node_modules,.git,build,venv,env,coverage
+set wildignore+=node_modules,.git,build,venv,env,coverage,vendor
 
 " Makes the little "|" show up for tabs
 " set list

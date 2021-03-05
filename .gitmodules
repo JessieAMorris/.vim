@@ -19,3 +19,6 @@
 [submodule "pack/mustache/start/vim-mustache-handlebars"]
 	path = pack/mustache/start/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars.git
+[submodule "pack/vim-css-color/start/vim-css-color"]
+	path = pack/vim-css-color/start/vim-css-color
+	url = git@github.com:ap/vim-css-color.git
