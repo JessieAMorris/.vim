@@ -22,3 +22,6 @@
 [submodule "pack/vim-css-color/start/vim-css-color"]
 	path = pack/vim-css-color/start/vim-css-color
 	url = git@github.com:ap/vim-css-color.git
+[submodule "pack/vim-graphql/start/vim-graphql"]
+	path = pack/vim-graphql/start/vim-graphql
+	url = https://github.com/jparise/vim-graphql.git
