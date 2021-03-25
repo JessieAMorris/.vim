@@ -187,3 +187,6 @@ set lazyredraw
 " Let Terraform be auto-indented
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+" Wordmotion (aka camelcase and underscore word movements)
+let g:wordmotion_prefix = ','

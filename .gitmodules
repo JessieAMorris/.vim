@@ -25,3 +25,6 @@
 [submodule "pack/vim-graphql/start/vim-graphql"]
 	path = pack/vim-graphql/start/vim-graphql
 	url = https://github.com/jparise/vim-graphql.git
+[submodule "pack/vim-wordmotion/start/vim-wordmotion"]
+	path = pack/vim-wordmotion/start/vim-wordmotion
+	url = git@github.com:chaoren/vim-wordmotion.git
