@@ -131,7 +131,7 @@ augroup CommandTExtension
 augroup END
 
 " Ignores directories for CommandT
-set wildignore+=node_modules,.git,build,venv,env,coverage,vendor
+set wildignore+=node_modules,.git,build,venv,env,coverage,vendor,__pycache__
 
 " Makes the little "|" show up for tabs
 " set list
@@ -187,6 +187,10 @@ set lazyredraw
 " Let Terraform be auto-indented
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+" Let Python files be auto-formatted
+let g:autopep8_disable_show_diff=1
+let g:autopep8_on_save = 1
 
 " Wordmotion (aka camelcase and underscore word movements)
 let g:wordmotion_prefix = ','

@@ -28,3 +28,6 @@
 [submodule "pack/vim-wordmotion/start/vim-wordmotion"]
 	path = pack/vim-wordmotion/start/vim-wordmotion
 	url = git@github.com:chaoren/vim-wordmotion.git
+[submodule "pack/vim-autopep8/start/vim-autopep8"]
+	path = pack/vim-autopep8/start/vim-autopep8
+	url = git@github.com:tell-k/vim-autopep8.git
