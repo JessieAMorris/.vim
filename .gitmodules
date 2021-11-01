@@ -31,3 +31,6 @@
 [submodule "pack/vim-autopep8/start/vim-autopep8"]
 	path = pack/vim-autopep8/start/vim-autopep8
 	url = git@github.com:tell-k/vim-autopep8.git
+[submodule "pack/vim-sqlfmt/start/vim-sqlfmt"]
+	path = pack/vim-sqlfmt/start/vim-sqlfmt
+	url = git@github.com:b4b4r07/vim-sqlfmt.git
