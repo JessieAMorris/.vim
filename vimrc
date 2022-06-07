@@ -56,9 +56,9 @@ filetype off
 filetype plugin indent on
 
 " Default to 2 space tabs :-(
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " Custom function to quickly set spaces vs tabs
@@ -134,8 +134,8 @@ augroup END
 set wildignore+=node_modules,.git,build,venv,env,coverage,vendor,__pycache__
 
 " Makes the little "|" show up for tabs
-" set list
-" set listchars=tab:\|\ ,trail:·
+set list
+set listchars=tab:\|\ ,trail:·,nbsp:¤,lead:·
 
 " ex command for toggling hex mode - define mapping if desired
 command -bar Hexmode call ToggleHex()
@@ -190,7 +190,21 @@ let g:terraform_fmt_on_save=1
 
 " Let Python files be auto-formatted
 let g:autopep8_disable_show_diff=1
-let g:autopep8_on_save = 1
+" let g:autopep8_on_save = 1
 
 " Wordmotion (aka camelcase and underscore word movements)
 let g:wordmotion_prefix = ','
+
+let g:sqlfmt_command = "sqlformat"
+let g:sqlfmt_options = "-r -k upper"
+let g:sqlfmt_auto = 0
+
+" let g:pymode_indent = 1
+
+let g:go_imports_autosave = 1
+let g:go_imports_mode = 'goimports'
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>c <Plug>(go-build)
+au FileType go nmap <leader>h <Plug>(go-test)
+imap <C-Space> <C-x><C-o>
+imap <C-@> <C-Space>

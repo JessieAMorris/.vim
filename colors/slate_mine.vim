@@ -18,10 +18,10 @@ let colors_name = "slate_mine"
 :hi IncSearch guifg=green guibg=black cterm=none ctermfg=yellow ctermbg=green
 :hi ModeMsg guifg=goldenrod cterm=none ctermfg=brown
 :hi MoreMsg guifg=SeaGreen ctermfg=darkgreen
-:hi NonText guifg=RoyalBlue guibg=grey15 cterm=bold ctermfg=blue
+:hi NonText guifg=SeaGreen ctermbg=darkgreen
 :hi Question guifg=springgreen ctermfg=green
 :hi Search guibg=peru guifg=wheat cterm=none ctermfg=grey ctermbg=blue
-:hi SpecialKey guifg=slategrey ctermfg=darkgreen
+:hi SpecialKey guifg=SeaGreen ctermfg=darkgreen
 :hi StatusLine guibg=#c2bfa5 guifg=black gui=none cterm=bold,reverse
 :hi StatusLineNC guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse
 :hi Title guifg=gold gui=bold cterm=bold ctermfg=yellow

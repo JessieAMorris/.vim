@@ -34,3 +34,9 @@
 [submodule "pack/vim-sqlfmt/start/vim-sqlfmt"]
 	path = pack/vim-sqlfmt/start/vim-sqlfmt
 	url = git@github.com:b4b4r07/vim-sqlfmt.git
+[submodule "pack/vim-python-pep8-indent/start/vim-python-pep8-indent"]
+	path = pack/vim-python-pep8-indent/start/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent.git
+[submodule "pack/python-mode/start/python-mode"]
+	path = pack/python-mode/start/python-mode
+	url = https://github.com/python-mode/python-mode.git
