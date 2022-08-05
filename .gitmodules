@@ -40,3 +40,6 @@
 [submodule "pack/python-mode/start/python-mode"]
 	path = pack/python-mode/start/python-mode
 	url = https://github.com/python-mode/python-mode.git
+[submodule "/Users/jessie/.vim/pack/vendor/start/nerdtree"]
+	path = /Users/jessie/.vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
