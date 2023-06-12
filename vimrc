@@ -10,6 +10,8 @@
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
+" Use the old Command-T
+let g:CommandTPreferredImplementation='ruby'
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -54,6 +56,9 @@ endif
 
 filetype off
 filetype plugin indent on
+
+" backspace is actin funky
+set backspace=indent,eol,start
 
 " Default to 2 space tabs :-(
 set tabstop=4
@@ -202,9 +207,10 @@ let g:sqlfmt_auto = 0
 " let g:pymode_indent = 1
 
 let g:go_imports_autosave = 1
-let g:go_imports_mode = 'goimports'
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>c <Plug>(go-build)
-au FileType go nmap <leader>h <Plug>(go-test)
-imap <C-Space> <C-x><C-o>
-imap <C-@> <C-Space>
+let g:go_fmt_autosave = 1
+"let g:go_imports_mode = 'goimports'
+"au FileType go nmap <leader>r <Plug>(go-run)
+"au FileType go nmap <leader>c <Plug>(go-build)
+"au FileType go nmap <leader>h <Plug>(go-test)
+"imap <C-Space> <C-x><C-o>
+"imap <C-@> <C-Space>
